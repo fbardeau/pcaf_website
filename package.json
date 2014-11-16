@@ -1,0 +1,14 @@
+{
+  "name": "WAAP",
+  "version": "0.0.1",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.10.2"
+  },
+  "devDependencies": {
+    "mocha": "^2.0.1",
+    "mocha-phantomjs": "^3.5.1",
+    "phantomjs": "^1.9.12",
+    "supertest": "^0.15.0"
+  }
+}

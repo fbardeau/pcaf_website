@@ -1,0 +1,33 @@
+body{
+  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+
+.home{
+	margin-bottom: 130px;
+}
+.title{
+	margin: 65px 0px 38px 0px;
+	font-size: 38px;
+}
+p{
+	font-size: 1.1em;
+}
+
+.btn-want{
+	margin-top: 35px !important;
+	border-radius: 5px !important;
+	padding: 12px 20px !important;
+	font-size: 24px !important;
+	color: #fff !important;
+	background-color: #2bde73 !important;
+	border-color: #fff !important;
+}
+
+.btn-want:hover, .btn-want:active{
+	border-radius: 5px !important;
+	padding: 12px 20px !important;
+	font-size: 24px !important;
+	color: #fff !important;
+	background-color: #26b258 !important;
+	border-color: #fff !important;
+}
