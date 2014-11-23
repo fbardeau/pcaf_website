@@ -12,7 +12,7 @@ var express = require('express'),
 
 
 i18n.configure({
-  locales:['en', 'ar', 'he'],
+  locales:['en', 'ar', 'he', 'fr'],
   directory: './locales',
   defaultLocale: 'en',
   cookie: 'lang'
