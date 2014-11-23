@@ -1,15 +1,21 @@
 extend ../layout
 block content
-  .home.col-lg-offset-3.col-lg-6
-    h1.title.
-      We Are All Palestinians
+  .home.col-lg-offset-3.col-lg-6.col-md-offset-3.col-md-6.col-sm-offset-2.col-sm-8.col-xs-offset-0.col-xs-12
+    h1.title We Are All Palestinians
     p.
-      Palestine should be recognized as a state to advance peace . Many countries have recognized but now citizens , anywhere in the world, to call loudly . This is the goal of this site is intended to allow the greatest number of support peacefully and without hatred vis- à-vis Israel's recognition of Palestine as a state. The very simple and very strong symbolic idea : we propose to fill an application form Palestinian nationality.
+      #{__('home-content-1')}
     p.
-      Nationality is something very important because it affects the identity of the people, it is especially which are denied to Palestinians and it is obviously an obstacle to peace and the two-state solution . If we are asking millions of Palestinian nationality: that will still prevent the recognition of Palestine as it exists concretely and publicly to millions of people ? And if in every country an important part of people expressed the wish to become Palestinian and therefore to recognize Palestine : what governments can still oppose or do not work at this recognition against the advice of their people ?
+      #{__('home-content-2')}
     p.
-      Our action is positive : in individual claiming membership of the Palestinian nation , and here today we have a historic opportunity to change the course of things and do it peacefully by referring back to back extremists , the helpless and the enemies of peace. So let's do it now, ask all Palestinian nationality and clearly express our desire to see the State of Palestine is recognized and proud to belong once it is finally done.
+      | #{__('home-content-3')}
     p.
-      This site is not linked to the Palestinian Authority or Hamas or any other political component, NGOs, Palestinian religious organization, or any other state, neither to terrorist and / or anti-Semitic movements that we take for responsible of the Palestinian people situation and the non-recognition of their state.
+      | #{__('home-content-4')}
     div.text-center
-      button.btn.btn-lg.btn-want I want to become palestinian
+      a.btn.btn-lg.btn-want(href="/forms/new").hidden-xs I want to become palestinian
+      a.btn.btn-want(href="/forms/new").btn-want-mobile.hidden-lg.hidden-md.hidden-sm.visible-xs
+        | I want 
+        br
+        | to become palestinian
+      p.text-center.count
+        span #{form_count}
+        |  application form Palestinian nationality filled

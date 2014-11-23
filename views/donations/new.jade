@@ -1,0 +1,25 @@
+extend ../layout
+block content
+  .donations-new.col-lg-offset-3.col-lg-6.col-md-offset-3.col-md-6.col-sm-offset-2.col-sm-8.col-xs-offset-0.col-xs-12
+    h1.title Help fund our action
+    #charge-error.alert.alert-danger.payment-errors
+    if errors_messages
+      .alert.alert-danger
+        each error_message in errors_messages
+          p= error_message
+
+    form#form-donations(action='/donations', method='post', enctype="application/x-www-form-urlencoded")
+      div.form-group
+        input(type='number', autocomplete='off', placeholder='Dollars amount', name="amount", min="1", required="required")
+
+      div.form-group
+        input(type='text', autocomplete='off', data-stripe='number', placeholder='Card number', name="card_number", required="required")
+      div.form-group
+        input(type='text', autocomplete='off', data-stripe='cvc', placeholder='CVC code', name="cvc_code", required="required")
+      div.form-group
+        input(type='text', data-stripe='exp-month', placeholder='Expiration month MM', name="expiration_month", required="required")
+      div.form-group
+        input(type='text', data-stripe='exp-year', placeholder='Expiration year YYYY', name="expiration_year", required="required")
+
+      div.text-center
+        input(type='submit', value='Make donation').btn.btn-lg.btn-want.submit-button

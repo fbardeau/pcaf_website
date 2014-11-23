@@ -1,13 +1,45 @@
 doctype
 html
   head
-    title We Are All Palestinians 
+    title We Are All Palestinians
     link(rel='stylesheet', href='/stylesheets/style.css')
     link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Raleway:500', type='text/css')
     link(rel='stylesheet', href='/css/main.css', type='text/css')
     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css')
     script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js")
+    script(src="https://code.jquery.com/jquery-2.1.1.min.js")
+    script(type='text/javascript', src='https://js.stripe.com/v1/')
+    script(type='text/javascript', src='/js/strive.js')
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
 
   body
+    #fb-root
+      script.
+          (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&appId=754880737869264&version=v2.0";
+          fjs.parentNode.insertBefore(js, fjs);
+          }(document, 'script', 'facebook-jssdk'));
+    header
+      p.text-right
+        | Language:
+        a(href='/langs/ar') AR
+        a(href='/langs/en') EN
+        a(href='/langs/he') HR
     .container
       block content
+    footer
+      .container
+        .col-lg-offset-3.col-lg-6.col-md-offset-3.col-md-6.col-sm-offset-2.col-sm-8.col-xs-offset-0.col-xs-12
+          div(class="fb-share-button", data-href="https://www.waap.co", data-layout="button_count")
+          a.twitter-share-button(href='https://twitter.com/share', data-url='https://www.waap.co', data-text='We Are All Palestinians', data-hashtags='waap') Tweet
+          script#twitter-wjs(src='http://platform.twitter.com/widgets.js')
+          script.
+                !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+
+          script(src='https://apis.google.com/js/platform.js', async='async', defer='defer')
+          .g-plus(data-action='share', data-annotation='bubble', data-href='https://www.waap.co')
