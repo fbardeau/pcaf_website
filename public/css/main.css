@@ -16,9 +16,9 @@ footer img{
 	width: 50px;
 }
 .fb-share-button, #twitter-widget-0, #___plus_0{
-	float: left;
-	margin-right: 18px;
-	margin-bottom: 10px;
+	float: left !important;
+	margin-right: 15px !important;
+	margin-bottom: 10px !important;
 }
 #twitter-widget-0{
 	width: 78px !important;
